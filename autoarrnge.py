@@ -7,8 +7,8 @@ extension_set = set()
 
 #adding each type of extension to the set
 for file in files_list:
-    name = file[::-1]
-    extension = name.split(sep=".")
+    
+    extension = file.split(sep=".")
     try:
         extension_set.add(extension[1])
     except IndexError:
