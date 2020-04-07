@@ -27,7 +27,7 @@ def arrange():
     for file in files_list:
         fextension = file.split(sep=".")
         try:
-            os.rename(file, fextension[1]+"_files/"+file)
+            os.rename(file, fextension[-1]+"_files/"+file)
         except (OSError, IndexError):
             continue
 
